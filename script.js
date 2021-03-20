@@ -1,4 +1,4 @@
-let today = function () {
+const today = function () {
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 };
 $(document).ready(function () {
@@ -8,16 +8,10 @@ $(document).ready(function () {
 
 
 $(".saveBtn").on("click", function () {
-    let text = $(This).siblings("textarea").val();
-    let time = $(this).parent().attr("id");
+    const text = $.trim($(This).siblings("textarea").val());
+    const time = $(this).parent().attr("id");
     localStorage.setItem(text, time);
 })
-
-// const array = localStorage.getItem("workDay");
-// const planner = JSON.parse(array);
-
-// workDay[time].event = text;
-// localStorage.setItem("workDay", JSON.stringify(workDay));
 
 // let workDay=[]
 $("#hour9.text").val(localStorage.getItem("hour9"));
@@ -29,26 +23,26 @@ $("#hour2.text").val(localStorage.getItem("hour2"));
 $("#hour3.text").val(localStorage.getItem("hour2"));
 $("#hour4.text").val(localStorage.getItem("hour4"));
 $("#hour5.text").val(localStorage.getItem("hour5"));
-;
+// const array = localStorage.getItem("workDay");
+// const planner = JSON.parse(array);
 
+// workDay[time].event = text;
+// localStorage.setItem("workDay", JSON.stringify(workDay));
 function timeLapse() {
-    let currentTime = moment().hour();
+    const currentTime = moment().hour();
 
     $(".timeBlock").forEach(function () {
-        let timeBlock = parseInt($(this).attr("id").split("hour")[1]);
+        const timeBlock = parseInt($(this).attr("id").split("hour")[1]);
 
         if (timeBlock < currentTime) {
             $(this).addClass("past");
-
         }
         else if (timeBlock === currentTime) {
             $(this).addClass("present");
-
         }
         else {
             $(this).addClass("future");
         }
-
     })
 
     timeLapse();
