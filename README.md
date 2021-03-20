@@ -6,3 +6,4 @@ This application runs in the browser and features dynamically updated HTML and C
 jQuery and moment.js links attracted.
 Bootstrap components and google fonts used.
 ### https://tsilvab.github.io/work_day_scheduler/.
+![image](https://user-images.githubusercontent.com/78382681/111888645-b5136d80-89b4-11eb-8b84-67edf81e20ff.png)
