@@ -10,18 +10,7 @@ $(document).ready(function () {
 $(".saveBtn").on("click", function () {
     let text = $(This).siblings("textarea").val();
     let time = $(this).parent().attr("id");
-
-    // let workDay=[]
-    $("#hour9.text").val(localStorage.getItem("hour9"));
-    $("#hour10.text").val(localStorage.getItem("hour10"));
-    $("#hour11.text").val(localStorage.getItem("hour11"));
-    $("#hour12.text").val(localStorage.getItem("hour12"));
-    $("#hour1.text").val(localStorage.getItem("hour1"));
-    $("#hour2.text").val(localStorage.getItem("hour2"));
-    $("#hour3.text").val(localStorage.getItem("hour2"));
-    $("#hour4.text").val(localStorage.getItem("hour4"));
-    $("#hour5.text").val(localStorage.getItem("hour5"));
-    ;
+    localStorage.setItem(text, time);
 })
 
 // const array = localStorage.getItem("workDay");
@@ -30,6 +19,17 @@ $(".saveBtn").on("click", function () {
 // workDay[time].event = text;
 // localStorage.setItem("workDay", JSON.stringify(workDay));
 
+// let workDay=[]
+$("#hour9.text").val(localStorage.getItem("hour9"));
+$("#hour10.text").val(localStorage.getItem("hour10"));
+$("#hour11.text").val(localStorage.getItem("hour11"));
+$("#hour12.text").val(localStorage.getItem("hour12"));
+$("#hour1.text").val(localStorage.getItem("hour1"));
+$("#hour2.text").val(localStorage.getItem("hour2"));
+$("#hour3.text").val(localStorage.getItem("hour2"));
+$("#hour4.text").val(localStorage.getItem("hour4"));
+$("#hour5.text").val(localStorage.getItem("hour5"));
+;
 
 function timeLapse() {
     let currentTime = moment().hour();
