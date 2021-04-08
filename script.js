@@ -20,19 +20,19 @@ $(document).ready(function () {
             if (blockTime < currentTime) {
                 $(this).removeClass("description");
                 // $("textarea").removeClass("present");
-                $(this).addClass("present")
+                $(this).addClass("past")
 
             }
             else if (blockTime === currentTime) {
                 $(this).removeClass("description");
                 // $("textarea").removeClass("future");
-                $(this).classList("present")
+                $(this).addclass("present")
 
             }
             else {
-                $(this).classList("description");
+                $(this).removeClass("description");
                 // $("textarea").removeClass("past");
-                $(this).classList("future")
+                $(this).addClass("future")
 
             }
         })
