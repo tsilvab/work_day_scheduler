@@ -18,19 +18,21 @@ $(document).ready(function () {
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
             if (blockTime < currentTime) {
-                $("textarea").removeClass(".description");
+                $(this).removeClass("description");
                 // $("textarea").removeClass("present");
-                $("textarea").addClass("past");
+                $(this).addClass("present")
+
             }
             else if (blockTime === currentTime) {
-                $("textarea").removeClass(".description");
+                $(this).removeClass("description");
                 // $("textarea").removeClass("future");
-                $("textarea").addClass("present");
+                $(this).classList("present")
+
             }
             else {
-                $("textarea").removeClass(".description");
+                $(this).classList("description");
                 // $("textarea").removeClass("past");
-                $("textarea").addClass("future");
+                $(this).classList("future")
 
             }
         })
